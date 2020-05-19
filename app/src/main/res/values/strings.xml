@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">JustCamera</string>
+    <string name="take_photo">take Photo</string>
+    <string name="by_jaba">By Jaba</string>
+</resources>

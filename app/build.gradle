@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        applicationId "com.example.justcamera"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    def junit_version = "4.13"
+    testImplementation "junit:junit:$junit_version"
+
+    def junit_test_version ="1.1.1"
+    androidTestImplementation "androidx.test.ext:junit:$junit_test_version"
+
+    def expresso_version = "3.2.0"
+    androidTestImplementation  "androidx.test.espresso:espresso-core:$expresso_version"
+
+    def rxbinding_version = "2.1.1"
+    implementation "com.jakewharton.rxbinding2:rxbinding:$rxbinding_version"
+
+    def rxpermission_version = "0.10.2"
+    implementation "com.github.tbruyelle:rxpermissions:$rxpermission_version"
+
+    def timber_version = "4.7.0"
+    implementation "com.jakewharton.timber:timber:$timber_version"
+}
