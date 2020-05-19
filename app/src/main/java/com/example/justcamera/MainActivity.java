@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -130,8 +131,8 @@ public class MainActivity extends AppCompatActivity {
 
     private File createImageFile() throws IOException {
         // Create an image file name
-        String timeStamp = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
-        String imageFileName = "JPEG_" + timeStamp;
+        @SuppressLint("SimpleDateFormat") String timeStamp = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
+        String imageFileName = "image_" + timeStamp;
         //This is the directory in which the file will be created. This is the default location of Camera photos
         File storageDir = new File(Environment.getExternalStoragePublicDirectory(
                 Environment.DIRECTORY_DCIM), "Camera");
