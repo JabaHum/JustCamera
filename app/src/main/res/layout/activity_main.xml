@@ -17,6 +17,7 @@
         android:text="@string/take_photo" />
 
     <ImageView
+        android:src="@mipmap/ic_launcher"
         android:layout_below="@id/btn_take_img"
         android:id="@+id/iv_img"
         android:layout_width="match_parent"
@@ -33,6 +34,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="2dp"
         android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
         android:text="@string/by_jaba"
         android:textSize="16sp" />
 
